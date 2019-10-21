@@ -1,0 +1,404 @@
+body, html {
+    height: 100%;
+}
+
+.dot::before{
+  content: "";
+  border-radius: 25px;
+  width: 0.5rem;
+  height: 0.5rem;
+  display: inline-block;
+  margin-right: 2%;
+  background-color: #19b94b;
+}
+
+// Start of first section
+#box {
+    background-color: #34495e;
+
+    &:after{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 10%;
+        background: -webkit-linear-gradient(left, rgba(150, 150, 150, 0), rgba(0, 0, 0, .25));
+    }
+
+    img{
+        width: 10%;
+    }
+
+    a{
+        text-decoration: none;
+        display: block;
+        color: white;
+        padding: 5px;
+        font-size: .8rem;
+        background-color: transparent;
+        border: 0;
+    }
+
+    a:hover { 
+      text-decoration: none; 
+      color: white;
+  
+  }
+
+    .active {
+        background-color: #2c3e50;
+        cursor: default;
+        position: relative;
+
+        &:before {
+            content : "";
+            position: absolute;
+            left: -7px;
+            bottom: -15%;
+            height: 130%;
+            border-right: 7px solid;
+            border-image: linear-gradient( to right, white,transparent ) 1 100%;
+          }
+        
+      }
+    
+    .line::after {
+        content : "";
+        width: 70%;
+        height: 1px;
+        background-color: white;
+        display: block;
+        margin: 15%;
+      }
+    
+    
+}
+
+// .line::after {
+//   content : "";    
+//   margin: 15% auto;
+//   background-color: white;
+  
+// }
+// End of first section
+
+// Start of second section
+.second-sec{
+  #hide:checked ~ .content { width: 100%; }
+
+  #top,
+  .content:target { display: block; }
+
+  .content:target ~ #top { display: none; }
+ // Start of search bar
+  .search {
+      width: 90%;
+      padding: 5% 3%;
+      background: #eff3f6;
+      cursor: pointer;
+      height: 10%;
+    
+      i{
+          color: #788086
+        }
+
+      input::placeholder{
+        font-size: 1.2rem;
+        color: #c7c9cb;
+      }
+    
+    }
+    // End of first section  
+    // Start of configure content
+  .content{
+      box-shadow: 0 -1px 6px -6px black;
+      .line2::after{
+        content : "";
+        width: 100%;
+        height: 1px;
+        background-color: #d7d7d7;
+        display: block;
+      }
+
+      h6{
+        font-size: 0.9rem;
+      }
+      
+      .name{
+        input, textarea{
+          height: 2.5rem;
+          @extend %gray-border;
+          font-size: 0.7rem;
+        }
+
+        .text-area{
+          height: 5rem;
+        }
+
+      }
+      // Start of quiz image
+      .setup-picture{
+
+          form {
+
+            #uploaded{
+              @extend %gray-border;
+              height: 200px;
+            }
+
+            .picture {
+              text-align: center;
+              @extend %gray-border;
+              height: 200px;
+
+              &:hover {
+                  background-color: #34495e;
+                  color: #aaa;
+
+                }
+
+              label{
+                text-decoration: #19b94b;
+                text-decoration-line: underline;
+                cursor: pointer;
+                color: #19b94b;
+                }
+            }
+        }
+        p{
+          font-size: 0.7rem;
+        }
+    }
+      // End of quiz image
+      #switch1,#switch2 {
+        display:none;
+      }
+      // Start of switch btns
+      .switch{
+        .buttonbackground {
+          background-color:#ccc;
+          width: 3rem;
+          height: 1.2rem;
+          border-radius: 1.25rem;
+          box-shadow:
+            0 2px 2px rgba(0,0,0,0.5) inset,
+            0 -2px 0px rgba(255,255,255,0.5) inset;
+          position: relative;
+          transition:background-color 0.2s ease;
+          margin: 0.75rem auto;
+          display:block
+        }
+      
+        .buttonslider {
+          background:#ddd;
+          width: 1.5rem;
+          height: 1.5rem;
+          border-radius:50%;
+          border:1px solid #aaa;
+          top:-0.15rem;
+          position: absolute;
+          box-shadow: 0 4px 3px rgba(0,0,0,0.3);
+          left: 0;
+          transition:all 0.2s ease;
+          display:block
+        }
+      }
+      
+      #switch1 + label:hover,
+      #switch2 + label:hover {
+        cursor:pointer;
+      }
+      #switch1:checked + label .buttonbackground,
+      #switch2:checked + label .buttonbackground {
+        background-color:#52ca77;
+      }
+      #switch1:checked + label .buttonslider,
+      #switch2:checked + label .buttonslider {
+        left: 1.5rem;
+        background:#eee;
+      }
+      // End of switch btns
+      //  Start of dropdown
+      .wrapper-dropdown-3 {
+        position: relative;
+        border-radius: 0.2rem;
+        box-shadow: 0 1px 1px rgba(50,50,50,0.1);
+        cursor: pointer;
+      
+        .dropdown {
+          position: absolute;
+          top: 140%;
+          left: 0;
+          right: 0;
+          background: white;
+          border-radius: inherit;
+          border: 1px solid rgba(0,0,0,0.17);
+          box-shadow: 0 0 5px rgba(0,0,0,0.1);
+          font-weight: normal;
+          -webkit-transition: all 0.5s ease-in;
+          -moz-transition: all 0.5s ease-in;
+          -ms-transition: all 0.5s ease-in;
+          -o-transition: all 0.5s ease-in;
+          transition: all 0.5s ease-in;
+          list-style: none;
+          opacity: 0;
+          pointer-events: none;
+      
+          &:after{
+            content: "";
+            width: 0;
+            height: 0;
+            position: absolute;
+            bottom: 100%;
+            right: 15px;
+            border-width: 0 6px 6px 6px;
+            border-style: solid;
+            border-color: #fff transparent; 
+          }
+      
+          &:before{
+            content: "";
+            width: 0;
+            height: 0;
+            position: absolute;
+            bottom: 100%;
+            right: 13px;
+            border-width: 0 8px 8px 8px;
+            border-style: solid;
+            border-color: rgba(0,0,0,0.1) transparent;   
+          }
+      
+          li a {
+            display: block;
+            text-decoration: none;
+            color:black;
+            border-bottom: 1px solid #e6e8ea;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,1);
+            -webkit-transition: all 0.3s ease-out;
+            -moz-transition: all 0.3s ease-out;
+            -ms-transition: all 0.3s ease-out;
+            -o-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
+          }
+      
+      
+      
+          li:hover a {
+            background: #f3f8f8;
+          }
+        
+        }
+      
+      }
+      
+      /* Active state */
+      .wrapper-dropdown-3.active .dropdown {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      
+      .no-opacity .wrapper-dropdown-3 .dropdown{
+        display: none;
+        opacity: 1; 
+        pointer-events: auto;
+      }  
+      // End of dropdown list
+      // Start of cobfirmation btns
+      .btns{
+        .btn1{
+          background: #34495e;
+        }
+        .btn2{
+          background: #52ca77;
+        }
+      }
+      // End of cobfirmation btns
+  }
+}
+// End of second section
+// Start of third section
+.third-sec{
+  background: #eff3f6;
+  // Start of admin info
+  .admin{
+    height: 10%;
+
+      & :last-child{
+        font-size: 3rem;
+      }
+  }
+  // End of admin info
+  // Start of live prev
+  .quiz-img{
+   .dot::after{
+     content: "";
+     display: inline-block;
+     width: 100%;
+     height: 1px;
+     background-color: #d7d7d7;
+   }
+    .darkbg{
+      background: rgba(0, 0, 0, 0.404);
+      filter: brightness(50%);
+    }
+
+.text-prev{
+    top: 35%;
+    left: 0;
+    right: 0;
+
+    }
+    #prevTitle{
+      padding: 0 13%;
+    }
+
+  }
+  // End of live prev
+}
+// End of third section
+
+
+
+@media screen and (min-width: 320px) and (max-width:699px){
+
+  .row{
+    display: grid;
+    grid-template-columns: 40% 60%;
+  }
+
+.third-sec{
+  display: none;
+}
+
+.second-sec{
+  .row{
+    display: grid;
+  grid-template-columns: 100%;
+  }
+
+  .content{
+
+    .setup-picture {
+      p {
+        font-size: 0.6rem;
+      }
+    }
+
+    .main{
+      margin-bottom: 40%;
+    }
+
+    .btns{
+      padding-top: 5% !important;
+
+      .btn2{
+        width: 100%;
+        margin-top: 10%;
+      }
+
+    }
+    
+    }
+  }
+} 

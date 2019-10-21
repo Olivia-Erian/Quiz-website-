@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Configure</title>
+    <link rel="Stylesheet" href="css/bootstrap.min.css">
+    <!-- <link href="Style-2.css" rel="Stylesheet" /> -->
+    <link href="css/Style.css" rel="Stylesheet" />
+    <link rel="stylesheet" href="Fonts/fontawesome-free-5.5.0-web/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+</head>
+
+<body>
+
+    <div class="row m-0">
+
+        <!-- Start of first section -->
+        <section id="box" class="text-white p-0 pt-4 col-lg-2 col-md-2 col-sm-4 ">
+            <h3 class="text-center">Quiz
+                <img src="web_screens/align-center.svg" class="ml-3">
+            </h3>
+
+            <div class="p-2 pr-3" id="tab-block">
+
+                <a href="#configure" title="Creat new quiz" class="active mt-3 text-white">
+                    <img src="web_screens/edit.svg" class="mr-2">
+                    Configure
+                </a>
+                <a href="#outcomes" title="Outcomes" class="mt-3">
+                    <img src="web_screens/network.svg" class="mr-3">
+                    Outcomes
+                </a>
+                <a href="#questions" title="questions" class="mt-3">
+                    <img src="web_screens/list.svg" class="mr-3">
+                    Questions
+                </a>
+                <a href="#leads" title="leads" class="mt-3">
+                    <img src="web_screens/man.svg" class="mr-3">
+                    Leads
+                </a>
+                <a href="#offer" title="offer" class="mt-3">
+                    <img src="web_screens/discount.svg" class="mr-3">
+                    Offer
+                </a>
+                <a href="#review" title="review & publish" class="mt-3 line">
+                    <img src="web_screens/paper-plane.svg" class="mr-3">
+                    Review & Publish
+                </a>
+                <a href="#dashboard" title="dashboard">
+                    <img src="web_screens/dashboard.svg" class="mr-3">
+                    Dashboard
+                </a>
+                <a href="#account" title="account" class="mt-3">
+                    <img src="web_screens/avatar.svg" class="mr-3">
+                    My Account
+                </a>
+                <a href="#integrations" title="integrations" class="mt-3">
+                    <img src="web_screens/network.svg" class="mr-3">
+                    Integrations
+                </a>
+
+            </div>
+        </section>
+        <!-- End of first section -->
+        <!-- Start of second section -->
+        <section class="col-lg-4 col-md-4 col-sm-8 p-0 second-sec">
+
+            <!-- Start of search bar -->
+            <div class="search m-0 mr-5">
+
+                <i class="fas fa-search mr-2 ml-3"></i>
+                <input type="text" placeholder="Find a user, team, quiz..." class="border-0 bg-transparent w-75">
+            </div>
+            <!-- End of first section -->
+            <!-- Start of configure content -->
+            <div class="content">
+                <div id="configure" class=" pr-5">
+                    <!-- Start of creat quiz -->
+                    <h5 class="p-2 m-0">Creat New Quiz ..</h5>
+                    <div class="line2 mb-3"></div>
+                    <!-- End of creat quiz -->
+                    <!-- Start of quiz name-->
+                    <div class="pl-5 name">
+                        <h6 class="dot">Quiz Name
+                            <span class="float-right font-weight-normal">10/100</span>
+                        </h6>
+                        <input type="text" class="w-100">
+                    </div>
+                    <!-- End of quiz name-->
+                    <!-- Start of quiz image-->
+                    <div class="p-2 pl-5 mt-2 setup-picture">
+                        <h6 class="dot">Quiz Image</h6>
+
+                        <form method="post" class="w-100 m-auto">
+                            <img src='#' id='uploaded' class="w-100 d-none">
+                            <!-- Uploaded picture goes here -->
+                            <div class="picture p-4">
+                                <img src="web_screens/photo-camera.svg" class="w-25">
+                                <h6>Drag image to Upload </h6>
+                                <h6 class="d-inline"> or
+                                    <input type="file" name="admin_picture" accept='image/*' placeholder="Click here"
+                                        class="d-none" id="img">
+
+                                    <label for="img" class="d-inline">Click here</label>
+                                </h6>
+                            </div>
+                        </form>
+
+                        <p>
+                            Max Size: 2MB
+                            <span class="float-right"> Requied Dimensions: 600 x 400</span>
+                        </p>
+                    </div>
+                    <!-- End of quiz image-->
+                    <!-- Start of quiz title-->
+                    <div class="pl-5 mt-2 name">
+                        <h6 class="dot">Quiz Title
+                            <span class="float-right font-weight-normal">10/100</span>
+                        </h6>
+                        <input type="text" class="w-100" id="title">
+                    </div>
+                    <!-- End of quiz title-->
+                    <!-- Start of quiz description-->
+                    <div class="pl-5 mt-3 mb-3 name">
+                        <h6 class="dot">Quiz Description
+                            <span class="float-right font-weight-normal">10/100</span>
+                        </h6>
+                        <textarea type="text" class="w-100 text-area" id="desc"></textarea>
+                    </div>
+                    <!-- Start of quiz description-->
+                    <!-- Start of quiz option-->
+                    <div class="row pl-5">
+                        <!-- Start of dropdown list-->
+                        <div class="col-lg-6 col-sm-12">
+                            <section class="main">
+                                <div class="wrapper-demo">
+                                    <div id="dd" class="wrapper-dropdown-3 p-1" tabindex="1">
+                                        <span>Call to Action
+                                            <i class="fas fa-align-justify float-right"></i>
+                                        </span>
+                                        <ul class="dropdown">
+                                            <li>
+                                                <a href="#" class="p-2">
+                                                    <i class="fas fa-cog float-right"></i>
+                                                    New Project</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="p-2">
+                                                    <i class="fas fa-chart-line float-right"></i>
+                                                    User Stats</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    ​
+                                </div>
+                            </section>
+                        </div>
+                        <!-- End of dropdown list-->
+                        <!-- Start of switch btns-->
+                        <div class="col-lg-3 col-md-6 col-sm-6 switch">
+                            <h6>Social Sharing</h6>
+                            <input id="switch1" type="checkbox">
+                            <label for="switch1">
+                                <span class="buttonbackground">
+                                    <span class="buttonslider"></span>
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-6 switch">
+
+                            <h6>Start Page</h6>
+                            <input id="switch2" type="checkbox" checked>
+                            <label for="switch2">
+                                <span class="buttonbackground">
+                                    <span class="buttonslider"></span>
+                                </span>
+                            </label>
+                        </div>
+                        <!-- End of switch btns-->
+                    </div>
+                    <!-- End of quiz option-->
+                    <!-- Start of cobfirmation btns-->
+                    <div class="row pl-5 m-0 pt-5 pb-3 btns">
+                        <div class="col-lg-5 col-sm-12">
+                            <button class="p-2 border-0 text-white rounded w-100 btn1"> Cancel</button>
+                        </div>
+                        <div class="col-lg-7 col-sm-12">
+                            <button class="p-2 border-0 float-right text-white rounded btn2"> Save and Creat
+                                Quiz</button>
+                        </div>
+                    </div>
+                    <!-- End of cobfirmation btns-->
+                </div>
+            </div>
+            <!-- End of configure content -->
+        </section>
+        <!-- End of second section -->
+        <!-- Start of third section -->
+        <section class=" col-lg-6 col-md-6 third-sec p-0">
+            <!-- Start of admin info -->
+            <div class="admin bg-white text-right w-100 p-4">
+                <i class="fas fa-cog"></i>
+                Admin/Name
+                <i class="fas fa-user-circle"></i>
+            </div>
+            <!-- End of admin info -->
+            <!-- Start of live prev -->
+            <div class="quiz-img p-5">
+                <h6 class="dot">Live Preview</h6>
+
+                <img src='#' id='preview' class="w-100 d-none position-relative darkbg">
+                <!-- Uploaded picture goes here -->
+                <div class="position-absolute p-3 text-white text-center text-prev">
+                    <!-- Uploaded texts goes here -->
+                    <h3 id="prevTitle"></h3>
+                    <h6 id="prevDesc"></h6>
+                </div>
+
+            </div>
+            <!-- End of live prev -->
+        </section>
+        <!-- End of third section -->
+    </div>
+
+    <script src="popper.min.js/popper.min.js"></script>
+    <script src="JS/bootstrap.min.js"></script>
+    <script src="JS/Script.js"></script>
+</body>
